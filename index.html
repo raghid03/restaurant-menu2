@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Sandwich Menu</title>
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --light-gray: #f8f9fa;
+            --dark-text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid var(--primary-red);
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 { color: var(--primary-red); margin: 0; }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-item:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #eee;
+            flex-shrink: 0;
+        }
+
+        .item-details {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-red);
+            margin: 0;
+        }
+
+        .item-price {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .ingredients {
+            font-style: italic;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 15px;
+            }
+
+            .logo-placeholder {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .menu-item {
+                flex-direction: row;
+                text-align: left;
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+            }
+
+            .item-img {
+                width: 180px;
+                height: 150px;
+                flex-shrink: 0;
+            }
+
+            .item-details {
+                margin-left: 15px;
+                margin-top: 0;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-name {
+                font-size: 1.2rem;
+            }
+
+            .item-price {
+                font-size: 1rem;
+                margin-top: 5px;
+            }
+
+            .container {
+                padding: 15px;
+                margin: 15px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-placeholder {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+                margin: 8px 0 0 0;
+            }
+
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+            }
+
+            .item-img {
+                width: 120px;
+                height: 120px;
+                flex-shrink: 0;
+            }
+
+            .item-details {
+                margin-left: 0;
+                margin-top: 12px;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .item-name {
+                font-size: 1.1rem;
+            }
+
+            .item-price {
+                font-size: 0.95rem;
+            }
+
+            .ingredients {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-placeholder">
+        <img src="malakmall.jpeg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+    </div>
+    <h1>Menu</h1>
+    <p>Fresh ingredients, served daily.</p>
+</header>
+
+<div class="container">
+    
+    <div class="menu-item">
+        <img src="tawouk.jpeg" alt="Tawouk" class="item-img">
+        <div class="item-details">
+            <div class="item-header">
+                <p class="item-name">Tawouk Sandwich</p>
+                <span class="item-price">$12.00</span>
+            </div>
+            <p class="ingredients">Grilled chicken marinated in garlic and spices, served with garlic sauce and pickles.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="burger.jpeg" alt="Lebanese Burger" class="item-img">
+        <div class="item-details">
+            <div class="item-header">
+                <p class="item-name">Lebanese Burger</p>
+                <span class="item-price">$13.50</span>
+            </div>
+            <p class="ingredients">Juicy beef patty, lettuce, tomato, and garlic sauce on a toasted bun.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="crispy.jpg" alt="Crispy Chicken" class="item-img">
+        <div class="item-details">
+            <div class="item-header">
+                <p class="item-name">Crispy Chicken Sandwich</p>
+                <span class="item-price">$11.00</span>
+            </div>
+            <p class="ingredients">Crispy fried chicken, lettuce, tomato, and mayo on a toasted bun.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="escalope.jpeg" alt="Escalope Sandwich" class="item-img">
+        <div class="item-details">
+            <div class="item-header">
+                <p class="item-name">Escalope Sandwich</p>
+                <span class="item-price">$15.00</span>
+            </div>
+            <p class="ingredients">Breaded and fried chicken escalope, lettuce, tomato, and mayo on a toasted bun.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="fahita.jpeg" alt="Fahita" class="item-img">
+        <div class="item-details">
+            <div class="item-header">
+                <p class="item-name">Chicken Fahita</p>
+                <span class="item-price">$11.50</span>
+            </div>
+            <p class="ingredients">Grilled chicken, bell peppers, onions, and fajita spices wrapped in a warm tortilla.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="crispy.jpg" alt="French Fries Sandwich" class="item-img">
+        <div class="item-details">
+            <div class="item-header">
+                <p class="item-name">French Fries Sandwich</p>
+                <span class="item-price">$2.50</span>
+            </div>
+            <p class="ingredients">Crispy golden french fries served in a sandwich.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--primary-red);">
+    <h2 style="color: var(--primary-red); margin-top: 0;">Add-On Options</h2>
+    <div style="font-size: 1.1rem; margin: 15px 0;">
+        <p><strong>Go Combo</strong> - French fries and soft drink: <span style="color: var(--primary-red); font-weight: bold;">+$2.80</span></p>
+    </div>
+</div>
+
+</body>
+</html>
