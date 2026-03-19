@@ -17,52 +17,51 @@
             padding: 0;
             background-color: white;
             color: var(--dark-text);
-            line-height: 1.6;
+            line-height: 1.4; /* Slightly tighter line height for mobile */
         }
 
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 10px;
             border-bottom: 5px solid var(--primary-red);
         }
 
         .logo-placeholder {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             background-color: var(--light-gray);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
+            margin: 0 auto 10px;
             border-radius: 50%;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
         }
 
-        h1 { color: var(--primary-red); margin: 0; }
+        h1 { color: var(--primary-red); margin: 0; font-size: 1.8rem; }
 
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 15px;
         }
 
         .menu-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            align-items: flex-start; /* Align to top of text */
+            margin-bottom: 20px;
+            padding-bottom: 15px;
             border-bottom: 1px solid #eee;
         }
 
         .menu-item:last-of-type {
             border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
 
         .item-img {
-            width: 300px;
-            height: 200px;
+            width: 100px; /* Fixed smaller width for mobile side-by-side */
+            height: 100px;
             object-fit: cover;
             border-radius: 8px;
             background-color: #eee;
@@ -70,139 +69,49 @@
         }
 
         .item-details {
-            margin-left: 20px;
+            margin-left: 15px;
             flex: 1;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
         }
 
         .item-name {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: var(--primary-red);
             margin: 0;
+            padding-right: 5px;
         }
 
         .item-price {
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            white-space: nowrap; /* Keeps price on one line */
         }
 
         .ingredients {
             font-style: italic;
             color: #666;
             margin-top: 5px;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            header {
-                padding: 30px 15px;
-            }
-
-            .logo-placeholder {
-                width: 100px;
-                height: 100px;
-                margin: 0 auto 10px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .menu-item {
-                flex-direction: row;
-                text-align: left;
-                margin-bottom: 25px;
-                padding-bottom: 15px;
-            }
-
+        /* Desktop Adjustment */
+        @media (min-width: 768px) {
             .item-img {
-                width: 180px;
-                height: 150px;
-                flex-shrink: 0;
+                width: 150px;
+                height: 120px;
             }
-
-            .item-details {
-                margin-left: 15px;
-                margin-top: 0;
-            }
-
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
             .item-name {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
-
-            .item-price {
-                font-size: 1rem;
-                margin-top: 5px;
-            }
-
-            .container {
-                padding: 15px;
-                margin: 15px auto;
-            }
-        }
-
-        @media (max-width: 480px) {
             .logo-placeholder {
-                width: 80px;
-                height: 80px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            header p {
-                font-size: 0.9rem;
-                margin: 8px 0 0 0;
-            }
-
-            .menu-item {
-                flex-direction: column;
-                text-align: center;
-                margin-bottom: 20px;
-                padding-bottom: 12px;
-            }
-
-            .item-img {
                 width: 120px;
                 height: 120px;
-                flex-shrink: 0;
-            }
-
-            .item-details {
-                margin-left: 0;
-                margin-top: 12px;
-            }
-
-            .item-header {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .item-name {
-                font-size: 1.1rem;
-            }
-
-            .item-price {
-                font-size: 0.95rem;
-            }
-
-            .ingredients {
-                font-size: 0.9rem;
-            }
-
-            .container {
-                padding: 12px;
             }
         }
     </style>
